@@ -31,5 +31,14 @@
                 
             </form>
     </div>
+    <p style="color: orange"><b>Lựa chọn chức năng theo yêu cầu:</b></p>
+    <form  method="GET">
+        <table>
+            <tr>
+                <td><p2>Xem danh sách thành viên: </p2></td>
+                <td><input type="submit" name="action" value="list"></td>
+            </tr>
+    </table>
+    </form>
 </body>
 </html>

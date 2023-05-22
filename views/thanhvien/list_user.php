@@ -28,3 +28,23 @@
         <?php }?>
     </table>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều hướng Controller</title>
+</head>
+<body>
+    <p style="color: orange"><b>Lựa chọn chức năng theo yêu cầu:</b></p>
+    <form  method="GET">
+        <table>
+            <tr>
+                 <td><p2>Thêm thành viên mới: </p2></td>
+                 <td><input type="submit" name="action" value="add"></td>
+            </tr>
+    </table>
+    </form>
+</body>
+</html>

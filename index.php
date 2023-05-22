@@ -4,8 +4,8 @@ include "models/DBConfig.php";
 $db = new Database;
 $db->connect();
 
-$controller = isset($_GET['controller'])?$_GET['controller']:'index';
-//$action     = isset($_GET['action'])?$_GET['action']:'';
+$controller = isset($_GET['controller'])?$_GET['controller']:'thanhvien';
+$action     = isset($_GET['action'])?$_GET['action']:'list';
 
 
 

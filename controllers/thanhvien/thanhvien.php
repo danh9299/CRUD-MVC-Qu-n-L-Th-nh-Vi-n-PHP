@@ -1,8 +1,5 @@
 <?php
 
-$controller = isset($_GET['controller'])?$_GET['controller']:'index';
-$action     = isset($_GET['action'])?$_GET['action']:'index';
-
 $noti_addnew = array();
 switch($action){
     case 'add':{
@@ -12,11 +9,11 @@ switch($action){
             $namsinh = $_POST['namsinh'];
             $quequan = $_POST['quequan'];
             $db->insertData($hoten, $namsinh, $quequan);
-            $name = $hoten;
+            $name = "<p style='color:pink; text-center'>Thêm thành công ".$hoten."</p>";
             
         }
         require_once('views/thanhvien/add_user.php');
-        echo "<p style='color:pink; text-center'>Thêm thành công ".$name."</p>";
+        echo $name;
         break;
         
     } 
@@ -64,9 +61,9 @@ switch($action){
         break;
     }
     default:{
-        $tbl = "thanhvien";
-        $datas = $db->getAllData($tbl);
-        require_once('views/thanhvien/list_user.php');
+        // $tbl = "thanhvien";
+        // $datas = $db->getAllData($tbl);
+        require_once('index.php');
         break;
     }
 }
@@ -77,27 +74,3 @@ switch($action){
 //     die('Tệp tin không tồn tại');
 // }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Điều hướng Controller</title>
-</head>
-<body>
-    <p style="color: orange"><b>Lựa chọn chức năng theo yêu cầu:</b></p>
-    <form  method="GET">
-        <table>
-            <tr>
-                 <td><p2>Thêm thành viên mới: </p2></td>
-                 <td><input type="submit" name="action" value="add"></td>
-            </tr>
-            <tr>
-                <td><p2>Xem danh sách thành viên: </p2></td>
-                <td><input type="submit" name="action" value="list"></td>
-            </tr>
-    </table>
-    </form>
-</body>
-</html>
