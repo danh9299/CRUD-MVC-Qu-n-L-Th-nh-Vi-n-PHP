@@ -1,6 +1,5 @@
 <?php
 
-$noti_addnew = array();
 switch($action){
     case 'add':{
         $name = '';
